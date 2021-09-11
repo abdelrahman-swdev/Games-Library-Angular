@@ -1,0 +1,28 @@
+<div class="game-thumbnail">
+    <div class="game-header">
+      <img *ngIf="game.background_image" class="game-image" alt="photo"
+        src={{game.background_image}}
+      />
+      <img *ngIf="!game.background_image" class="game-image" alt="photo"
+        src='assets/images/No-Image.jpg'
+      />
+    </div>
+    <div class="game-body">
+      <p>{{game.name}}</p>
+    </div>
+    <div class="game-footer">
+      <div class="generes">
+        <span *ngFor="let gen of game.genres; let last = last">
+          {{gen.name}}<span *ngIf="!last"> , </span>
+        </span>
+      </div>
+      <div class="rating">
+          <span>{{game.rating}} <i class="bi bi-star-fill"></i></span>
+      </div>
+      <div class="view-more">
+        <a routerLink="/games/{{game.id}}" class="view-more-link">
+          Details <i class="bi bi-eye"></i>
+        </a>
+      </div>
+    </div>
+  </div>

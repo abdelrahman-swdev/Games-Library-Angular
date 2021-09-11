@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row" style="margin-top: 30px">
+    <div class="col-12 filters">
+      <form #orderingForm="ngForm" class="select-form">
+        <label class="label-select">Order Games By :</label>
+        <select
+          style="width: auto"
+          class="form-select"
+          name="ordering"
+          [(ngModel)]="ordering"
+          (ngModelChange)="onSelectOrdering($event)"
+        >
+          <option value="name" [selected]="ordering == 'name'">Name</option>
+          <option value="-added" [selected]="ordering == '-added'">
+            Added
+          </option>
+          <option value="-rating" [selected]="ordering == '-rating'">
+            Rating
+          </option>
+          <option value="-released" [selected]="ordering == '-released'">
+            Release
+          </option>
+          <option value="-updated" [selected]="ordering == '-updated'">
+            Updated
+          </option>
+        </select>
+      </form>
+    </div>
+    <div
+      *ngFor="let game of games"
+      class="col-12 col-sm-6 col-lg-4"
+      style="margin-top: 24px"
+    >
+      <app-game-thumbnail [game]="game"></app-game-thumbnail>
+    </div>
+    <div class="col-12 paging-container">
+      <button *ngIf="result?.previous" class="back-button" (click)="goBack()"
+        ><i class="bi bi-arrow-left-circle-fill"></i> BACK
+      </button>
+      <button *ngIf="result?.next" class="next-button" (click)="goNext()"
+        >NEXT <i class="bi bi-arrow-right-circle-fill"></i
+      ></button>
+    </div>
+  </div>
+  <span class="go-top" (click)="goTop()">
+    <i class="bi bi-arrow-up-circle-fill"></i>
+  </span>
+</div>

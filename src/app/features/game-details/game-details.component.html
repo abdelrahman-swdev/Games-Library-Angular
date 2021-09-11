@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12 details-header" 
+    style.backgroundImage="url('{{game.background_image_additional}}')">
+        <div class="details-heading">
+            <p>{{game.name}}</p>
+        </div>
+        <div class="details-releasing">
+            <p>Release: {{game.released}}</p>
+        </div>
+        <div class="details-genres">
+            <span *ngFor="let gen of game.genres; let last = last">
+                {{gen.name}}<span *ngIf="!last"> , </span>
+            </span>
+        </div>
+        
+    </div>
+    <div class="col-12 col-md-10 offset-md-1 info-section" style="padding: 0;">
+        <div class="details-body">
+            <div class="about">
+                <p>About</p>
+            </div>
+            <div class="info">
+                <p>
+                    Platforms: 
+                    <span *ngFor="let platform of game.platforms; let last = last">
+                        {{platform.platform.name}}<span *ngIf="!last"> , </span>
+                    </span>
+                </p>
+                <p>Publishers: 
+                    <span *ngFor="let pub of game.publishers; let last = last">
+                        {{pub.name}}<span *ngIf="!last"> , </span>
+                    </span>
+                </p>
+                <p>Website: <a target="_blank" href="{{game.website}}">{{game.website}}</a></p>
+                <p>{{game.description_raw}}</p>
+            </div>
+        </div>
+    </div>
+</div>

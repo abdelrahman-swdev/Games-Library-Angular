@@ -1,0 +1,33 @@
+.footer-info{
+    width: 100%;
+    padding: 15px;
+    margin-top: 50px;
+}
+.owner{
+    text-align: center;
+    padding: 10px;
+}
+.owner a{
+    text-decoration: none;
+}
+.icons-section, .api-info{
+    text-align: center;
+    padding: 10px;
+}
+.icons-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.icon{
+    margin-right: 15px;
+}
+a{
+    color: gray;
+}
+a:hover{
+    color: #fff;
+}

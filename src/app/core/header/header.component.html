@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container" style="justify-content: center;">
+    <a routerLink="/games" class="navbar-brand" style="font-weight: bold;">Games Library</a>
+    <form #searchForm=ngForm class="d-flex" (ngSubmit)="search(searchForm)">
+      <input ngModel
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        name="searchQuery"
+      />
+      <button class="btn btn-outline-secondary" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
