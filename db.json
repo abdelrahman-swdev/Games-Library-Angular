@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "user@test.com",
+      "password": "$2a$10$8HzQON7qz7sOOwj1MdLk0.qyUPvbkbtPV7iewnkuU6KDMcBzESZ8q",
+      "firstName": "user",
+      "lastName": "one",
+      "age": 12,
+      "id": 1
+    },
+    {
+      "email": "ali@test.com",
+      "password": "$2a$10$t.qvFAX8uZrcCIlZp/pVMeooBgfLz975.zNkzbe/CMZLQcdz0Ip4u",
+      "firstName": "Ali",
+      "lastName": "samy",
+      "age": 21,
+      "id": 2
+    },
+    {
+      "email": "abdo@test.com",
+      "password": "$2a$10$f1uEDokAKXyen.8OyHu0YufHykXJzhZfdchefryNImpsagfS5BAFC",
+      "firstName": "abdo",
+      "lastName": "ahmed",
+      "age": 21,
+      "id": 3
+    }
+  ]
+}
